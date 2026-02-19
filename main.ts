@@ -38,13 +38,13 @@ function stage () {
     jumpPower = 0
     gravity = 0
     if (level == 1) {
-        level_4()
+        level_1()
     } else if (level == 2) {
         level_2()
     } else if (level == 3) {
-        level_3()
+        level_4()
     } else if (level == 4) {
-    	
+        level_3()
     } else if (level == 5) {
     	
     } else if (level == 6) {
