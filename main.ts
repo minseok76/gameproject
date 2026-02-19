@@ -236,6 +236,9 @@ function level_1 () {
 info.onCountdownEnd(function () {
     stage()
 })
+info.onScore(2, function () {
+    game.setGameOverMessage(true, "더 많은 맵은 다음에!")
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`hazardLava1`, function (sprite, location) {
     mySprite.sayText("으악", 2000, false)
     scene.cameraShake(4, 500)
