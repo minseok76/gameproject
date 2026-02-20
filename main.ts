@@ -118,9 +118,6 @@ function level_3 () {
     controller.moveSprite(mySprite, moveSpeed, 0)
     mySprite.sayText("열쇠를 3개 찾아 탈출하세요", 2000, false)
 }
-info.onScore(4, function () {
-    mySprite.sayText("더많은 맵은 다음에ㅠ", 2000, false)
-})
 function stage () {
     sprites.destroyAllSpritesOfKind(SpriteKind.key)
     sprites.destroyAllSpritesOfKind(SpriteKind.door)
@@ -487,7 +484,7 @@ function level_5 () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.key)
-    tiles.placeOnTile(key, tiles.getTileLocation(33, 4))
+    tiles.placeOnTile(key, tiles.getTileLocation(13, 5))
     key = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . 4 . . . . . . . . 
@@ -506,7 +503,7 @@ function level_5 () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.key)
-    tiles.placeOnTile(key, tiles.getTileLocation(55, 2))
+    tiles.placeOnTile(key, tiles.getTileLocation(31, 5))
     key = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . 4 . . . . . . . . 
@@ -525,7 +522,7 @@ function level_5 () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.key)
-    tiles.placeOnTile(key, tiles.getTileLocation(83, 8))
+    tiles.placeOnTile(key, tiles.getTileLocation(56, 3))
     key = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . 4 . . . . . . . . 
@@ -544,7 +541,7 @@ function level_5 () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.key)
-    tiles.placeOnTile(key, tiles.getTileLocation(115, 8))
+    tiles.placeOnTile(key, tiles.getTileLocation(27, 3))
     key = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . 4 . . . . . . . . 
@@ -587,7 +584,7 @@ function level_5 () {
     controller.moveSprite(mySprite, moveSpeed, 0)
     mySprite.sayText("여기는 무중력이에요", 2000, false)
     timer.after(2000, function () {
-        mySprite.sayText("키를 4개를 찾아 탈출해요", 2000, false)
+        mySprite.sayText("키를 5개를 찾아 탈출하세요", 2000, false)
     })
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
@@ -605,6 +602,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.key, function (sprite, otherSpri
 function fail () {
     stage()
 }
+info.onScore(5, function () {
+    mySprite.sayText("더많은 맵은 다음에ㅠ", 2000, false)
+})
 let key: Sprite = null
 let moveSpeed = 0
 let gravity = 0
