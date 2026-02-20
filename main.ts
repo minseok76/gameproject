@@ -130,7 +130,7 @@ function stage () {
     jumpPower = 0
     gravity = 0
     if (level == 1) {
-        level_5()
+        level_1()
     } else if (level == 2) {
         level_2()
     } else if (level == 3) {
@@ -138,7 +138,7 @@ function stage () {
     } else if (level == 4) {
         level_4()
     } else if (level == 5) {
-    	
+        level_5()
     } else if (level == 6) {
     	
     } else if (level == 7) {
