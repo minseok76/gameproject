@@ -137,7 +137,7 @@ function stage () {
     } else if (level == 5) {
         level_5()
     } else if (level == 6) {
-    	
+        level_6()
     } else if (level == 7) {
     	
     } else if (level == 8) {
@@ -325,6 +325,132 @@ function level_1 () {
 info.onCountdownEnd(function () {
     stage()
 })
+function level_6 () {
+    totalkey = 5
+    gravity = 80
+    jumpPower = -80
+    moveSpeed = 70
+    scene.setBackgroundColor(12)
+    tiles.setCurrentTilemap(tilemap`수준5`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 3))
+    key = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . 4 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.key)
+    tiles.placeOnTile(key, tiles.getTileLocation(13, 5))
+    key = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . 4 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.key)
+    tiles.placeOnTile(key, tiles.getTileLocation(31, 5))
+    key = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . 4 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.key)
+    tiles.placeOnTile(key, tiles.getTileLocation(56, 3))
+    key = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . 4 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.key)
+    tiles.placeOnTile(key, tiles.getTileLocation(27, 3))
+    key = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 5 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . 4 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . 4 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . 4 . . . . . . . . 
+        . . . . . . . 4 4 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.key)
+    tiles.placeOnTile(key, tiles.getTileLocation(135, 1))
+    door = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f 5 f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        . . . f f f f f f f f f f f . . 
+        `, SpriteKind.door)
+    tiles.placeOnTile(door, tiles.getTileLocation(118, 6))
+    mySprite.ay = gravity
+    controller.moveSprite(mySprite, moveSpeed, 0)
+    mySprite.sayText("키를 5개를 찾아 탈출하세요", 2000, false)
+}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`hazardLava1`, function (sprite, location) {
     mySprite.sayText("으악", 2000, false)
     scene.cameraShake(4, 500)
@@ -434,7 +560,7 @@ function level_4 () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.key)
-    tiles.placeOnTile(key, tiles.getTileLocation(135, 1))
+    tiles.placeOnTile(key, tiles.getTileLocation(124, 2))
     door = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . f f f f f f f f f f f . . 
@@ -560,7 +686,7 @@ function level_5 () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.key)
-    tiles.placeOnTile(key, tiles.getTileLocation(135, 1))
+    tiles.placeOnTile(key, tiles.getTileLocation(70, 13))
     door = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . f f f f f f f f f f f . . 
@@ -602,7 +728,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.key, function (sprite, otherSpri
 function fail () {
     stage()
 }
-info.onScore(5, function () {
+info.onScore(6, function () {
     mySprite.sayText("더많은 맵은 다음에ㅠ", 2000, false)
 })
 let key: Sprite = null
@@ -634,4 +760,5 @@ mySprite = sprites.create(img`
     . . . f f . . f f . . . . 
     `, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
+info.changeScoreBy(1)
 stage()
